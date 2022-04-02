@@ -7,7 +7,7 @@ const leftBorderWidth = 15;
 
  confirm("Ты здесь пидр?");
 
- const owo = prompt("Ты ублюдок?");
+ const owo = prompt("Ты молодчинка");
 
  const category = 'cat';
  console.log(`https://someurl.com/${category}/5`);
