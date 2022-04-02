@@ -5,7 +5,7 @@ const leftBorderWidth = 15;
 
 // alert('dsadsadasdasd;')
 
- confirm("Ты здесь пидр?");
+ confirm("Кто здесь красавчик??");
 
  const owo = prompt("Ты молодчинка");
 
