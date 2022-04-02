@@ -10,4 +10,5 @@ const leftBorderWidth = 15;
  const owo = prompt("Ты молодчинка");
 
  const category = 'cat';
+ const home = 1;
  console.log(`https://someurl.com/${category}/5`);
