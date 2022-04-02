@@ -11,4 +11,5 @@ const leftBorderWidth = 15;
 
  const category = 'cat';
  const home = 1;
+ const work = 2;
  console.log(`https://someurl.com/${category}/5`);
