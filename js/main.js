@@ -1,15 +1,26 @@
 "use strict";
-let number = 5;
-const leftBorderWidth = 15;
- var name = 'Ivan';
 
-// alert('dsadsadasdasd;')
+const obj = {
+    name: 'Maxim',
+    age: 25,
+    isMarried: false
+};
+ obj.z = 'new';
+ console.log(obj);
 
- confirm("Кто здесь красавчик??");
+let arr = ['first', 'second', 'third', 7, false, [], {}];
+console.log(arr);
 
- const owo = prompt("Ты молодчинка");
+// alert('HELLO');
 
- const category = 'cat';
- const home = 1;
- const work = 2;
- console.log(`https://someurl.com/${category}/5`);
+// const result = confirm('Are you here?');
+// console.log(result);
+const answer = prompt('18 есть?', '');
+const category = 'toys';
+console.log(`https://someurl.com/${category}/5`);
+console.log(4 ++'5');
+let incr = 10,
+      decr = 10;
+    
+      console.log(incr++);
+      console.log(incr);
