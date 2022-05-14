@@ -18,9 +18,9 @@ console.log(arr);
 const answer = prompt('18 есть?', '');
 const category = 'toys';
 console.log(`https://someurl.com/${category}/5`);
-console.log(4 ++'5');
-let incr = 10,
-      decr = 10;
+console.log(4 + +'5');
+let incr = 15,
+      decr = 15;
     
       console.log(incr++);
       console.log(incr);
