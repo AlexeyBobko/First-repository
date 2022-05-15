@@ -35,9 +35,6 @@ if(false) {
     console.log('zzz');
 };
 
-const num = 50;
-(num === 50) ? console.log('yes') : console.log('no');
-
 const apple = 89;
 switch (apple) {
     case 90:
@@ -53,3 +50,7 @@ switch (apple) {
         console.log('ничего из указанного');
         break;
 };
+
+//Тернарный оператор
+const num = 50;
+(num === 50) ? console.log('yes') : console.log('no');
