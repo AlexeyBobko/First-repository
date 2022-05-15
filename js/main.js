@@ -10,13 +10,15 @@ const obj = {
 //Массив
 let arr = ['first', 'second', 'third', 7, false, [], {}];
 console.log(arr);
-    //Общение с пользователем
-// alert('HELLO');
 
-// const result = confirm('Are you here?');
-// console.log(result);
-const answer = prompt('18 есть?', '');
-const category = 'toys';
+//Общение с пользователем
+    // alert('HELLO');
+
+    // const result = confirm('Are you here?');
+    // console.log(result);
+    // const answer = prompt('18 есть?', '');
+    // const category = 'toys';
+
 // Интерполяция
 console.log(`https://someurl.com/${category}/5`);
 console.log(4 + +'5');
@@ -54,3 +56,28 @@ switch (apple) {
 //Тернарный оператор
 const num = 50;
 (num === 50) ? console.log('yes') : console.log('no');
+
+// Циклы
+let axe = 55;
+
+while (axe < 60) {
+    console.log(axe);
+    axe++;
+}
+
+do {
+    console.log(axe);
+    axe++;
+}
+while (axe <60);
+
+for (let i = 1; i < 5; i++) {
+    console.log(i);
+}
+for (let i = 1; i < 10; i++) {
+    if (i === 6){
+        // break;
+        continue; //Этот опреатор позволяет пропустить шаг, указанный в условии и при этом не прерывает цикл
+    }
+    console.log(i);
+}
