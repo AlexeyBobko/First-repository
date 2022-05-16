@@ -57,6 +57,17 @@ switch (apple) {
 const num = 50;
 (num === 50) ? console.log('yes') : console.log('no');
 
+// Логические операторы
+const humburger = 0,
+      fries = 0,
+      cola = 0;
+      console.log(humburger === 3 && cola && fries);
+      console.log(humburger === 3 && cola === 1 && fries);
+      console.log(humburger || cola || fries);
+let alex = 'a', 
+    john = 'b', 
+    max = 'c';
+    console.log(alex || john || max); //Здесь он выводится значение 1-ого true
 // Циклы
 let axe = 55;
 
