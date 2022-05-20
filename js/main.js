@@ -116,3 +116,11 @@ first: for(let i = 0; i < 3; i++){
         }
     }
 }
+
+// Функции
+
+function showFirstMrssage (text, sum, fuck, her) {
+    console.log(text);
+    let num = 20; 
+}
+showFirstMrssage('dasdsadsad');
