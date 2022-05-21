@@ -118,9 +118,25 @@ first: for(let i = 0; i < 3; i++){
 }
 
 // Функции
-
-function showFirstMrssage (text, sum, fuck, her) {
+showFirstMrssage('This is exapmle of function declaration1');
+function showFirstMrssage (text) { //Function declaration
     console.log(text);
     let num = 20; 
 }
-showFirstMrssage('dasdsadsad');
+
+const logger = function () { //Function expression
+    console.log('This is exapmle of function expression');
+};
+    logger ();
+
+const calc = (a, b) => {return a + b}; //Стрелочная функция; если функция имеет 1 аргумент, то скобки() можно опустить
+
+const abc = a => {return a };
+
+const usdCurs = 28;
+const eurCurs = 35;
+function convert(amount, curr) {
+    console.log(curr*amount);
+}
+convert(500, usdCurs);
+convert(500, eurCurs);
