@@ -135,8 +135,23 @@ const abc = a => {return a };
 
 const usdCurs = 28;
 const eurCurs = 35;
+const discount = 0.9;
 function convert(amount, curr) {
-    console.log(curr*amount);
+    return curr*amount;
+}
+function promotion(result) {
+    console.log(result*discount);
 }
 convert(500, usdCurs);
 convert(500, eurCurs);
+promotion(convert(500, eurCurs)); // О важности return
+
+function test() {
+    for (let i = 0; i < 5; i++){
+        console.log(i);
+        if ( i === 3) return// здесь слово return просто останавливает функцию
+    }                       //оно возвращает значение undefined
+    console.log('Done');
+}
+
+test ();
