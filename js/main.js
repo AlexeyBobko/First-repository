@@ -155,3 +155,36 @@ function test() {
 }
 
 test ();
+
+function sayHello(name) {
+    return console.log(`Привет, ${name}!`);
+}
+sayHello('Антон');
+
+function returnNeighboringNumbers(num) {
+    return console.log([num-1, num, num+1]);
+}
+returnNeighboringNumbers(9);
+
+function getMathResult(a, b) {
+    if(typeof b !== 'number' || b <= 0){
+         return console.log(a);
+    } 
+    let str = '';
+
+    for (let i = 1; i <= b; i++) {
+        if(i === b){
+            str += `${a*i}`;
+        } else {
+            str += `${a*i}---`;
+        }
+    }
+    return console.log(str);
+}
+getMathResult(7, 4);
+
+const str = 'qwerty';
+console.log(str.toUpperCase());
+
+const fruit = 'abra kadabra bum';
+console.log(fruit.indexOf('bum'));
