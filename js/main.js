@@ -188,3 +188,44 @@ console.log(str.toUpperCase());
 
 const fruit = 'abra kadabra bum';
 console.log(fruit.indexOf('bum'));
+
+//Callback-функции
+
+function first() {
+    // do something
+    setTimeout(function() {
+        console.log(1); //Такая запись позвоялет задержать выполнение на 500мс
+    },500);
+}
+function second() {
+    console.log(2);
+}
+first();
+second();
+//Объекты, деструктуризация объектов
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 860,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function(){ //Вот таким образом можно самостоятельно создать свой метод в объекте
+        console.log('Test');
+    }
+};
+    const {border, bg} = options.colors; //Вот таким образом можно деструктурировать объект, т.е. разделить на более мелкие части
+    console.log(border, bg);
+console.log(Object.keys(options)); //Это свойство объекта для определения кол-ва элементов в виде массива
+console.log(Object.keys(options).length);// А такая запись просто выдаст число
+
+for (let key in options){ //Для перебора объекта можно использовать способ For in
+    if( typeof(options[key])=== 'object') {
+        for( let i in options[key]){
+            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+        }
+    }else {
+        console.log(`Свойство ${key} имеет значение ${options[key]}`);
+    }
+}
