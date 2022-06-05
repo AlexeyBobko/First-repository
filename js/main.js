@@ -229,3 +229,171 @@ for (let key in options){ //Для перебора объекта можно и
         console.log(`Свойство ${key} имеет значение ${options[key]}`);
     }
 }
+
+function getCoupeNumber(num) {
+    if(typeof(num) !== 'number' || num < 0 || !Number.isInteger(num)){
+        console.log('Ошибка. Проверьте правильность введенного номера места');
+    }else if(num === 0 || num > 36){
+        console.log('Таких мест в вагоне не существует');
+    }else {
+        console.log(`Номер вашего купе ${Math.ceil(num/4)}`);
+    }
+}
+getCoupeNumber(36);
+
+function getTimeFromMinutes(minute) {
+    if(typeof(minute) !== 'number' || minute <= 0 || !Number.isInteger(minute)){
+        console.log('Ошибка, проверьте данные');
+    }else {
+        let hour = Math.floor(minute / 60);
+        if(hour === 2 || hour === 3 || hour === 4){
+            console.log(`Это ${hour} часа и ${minute % 60} минут`);
+        }else if(hour === 1){
+            console.log(`Это ${hour} час и ${minute % 60} минут`);
+        }else {
+            console.log(`Это ${hour} часов и ${minute % 60} минут`);
+        }
+    }
+}
+getTimeFromMinutes(400);
+
+function findMaxNumber(a, b, c, d) {
+    if(typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number' || typeof d !== 'number'){
+        console.log(0); 
+    } else {
+        console.log(Math.max(a, b, c, d));
+    }
+}
+findMaxNumber(23, '107', 219, 51);
+
+function fib(num) {
+    if(num <= 0 || typeof(num) !== 'number' || !Number.isInteger(num)){
+        console.log('');
+    }else {
+        let str = '';
+        for(let i = 0; i < num; i++){
+        str = str + ' ' + i;
+        }
+        console.log(str);
+    }
+}
+fib(7);
+
+//Массивы и псевдомассивы
+
+
+// Передача по ссылке и по значению
+
+let a = 5, // В примитивных типах данных происходит передача по значению
+    b = 10;//т.е. в переменную b полностью перезаписывается значение а
+b = b + 4;
+console.log(b);
+console.log(a);
+
+const obx = {
+    a: 3,
+    b: 7
+};
+const copy = obx; //Здесь же данные не перезаписываются, а тут происходит передача по ссылке
+copy.a = 8;// т.е. copy ссылается на obx
+console.log(obx);
+console.log(copy);
+
+const add = {
+    c: 12,
+    d: 25
+};
+console.log(Object.assign(obx, add)); // Метод Object.assign() позволяет объединить объекты
+
+const oldArray = ['as', 'bs', 'cs'];
+const newArray = oldArray.slice(); //Метод slice() применяется для копирования массивов
+newArray[1] = 'dsadsadsadsa';
+console.log(newArray);
+console.log(oldArray);
+
+//Spread-опреатор(оператор разворота)
+const video = ['filmix', 'youtube', 'rutube'],
+      blogs = ['tilda', 'twitter', 'content'],
+      internet = [...video, ...blogs]; //Spread-оператор разбивает на составляющие компоненты массивы и позволяет 
+      console.log(internet); //записать отдельно элементы массива, а не оба массива по отделности
+// ООП
+
+Object.setPrototypeOf(jonh, soldier);
+const jonh = Object.create(soldier)
+
+const personalPlanPeter = {
+    name: "Peter",
+    age: "29",
+    skills: {
+        languages: ['ru', 'eng'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%',
+            java: '30%',
+            python: '40%'
+        },
+        exp: '1 month'
+    }
+};
+function showExperience(plan) {
+    const {exp} = plan.skills;
+    console.log(exp);
+}
+showExperience(personalPlanPeter);
+
+function showProgrammingLangs(plan) {
+    let str = '';
+    const {programmingLangs} = plan.skills;
+    for (let key in programmingLangs) {
+      str = str + `Язык ${key} изучен на ${programmingLangs[key]}\n`; 
+    }
+    console.log(str);
+
+    return str;
+}
+showProgrammingLangs(personalPlanPeter)
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     },
+//     showAgeAndLangs: function(plan) {
+//         const {age} = plan;
+//         const {languages} = plan.skills;
+//         let str = `Мне ${age} и я владею языками: `;
+
+//         languages.forEach(function(lang) {
+//             str += `${lang.toUpperCase()} `;
+//         });
+
+//         return str;
+//     }
+// };
+
+// personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+// function showExperience(plan) {
+//     const {exp} = plan.skills;
+//     return exp;
+// }
+
+// showExperience(personalPlanPeter);
+
+// function showProgrammingLangs(plan) {
+//     let str = '';
+//     const {programmingLangs} = plan.skills;
+//     for (let key in programmingLangs) {
+//         str += `Язык ${key} изучен на ${programmingLangs[key]}\n`
+//     }
+
+//     return str;
+// }
+
+// showProgrammingLangs(personalPlanPeter);
