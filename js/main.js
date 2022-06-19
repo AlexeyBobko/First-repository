@@ -1,16 +1,39 @@
 "use strict";
+//Стилистика кода
+function pow(x, n) {
+    var result = 1;
+
+    for (var i = 0; i < n; i++) {
+        result *= x;
+    }
+    return result;
+}
+// var x = prompt('x?', '')
+console.log(typeof alert);
+const user = {};
+let full = 'aaaaaaaaaaaa';
+full = 'bbbbbbbbbbbb';
+console.log(full);
+
+let user1 = {
+    name: 'john',
+    age: 28,
+}
+let key = prompt('что хочешь?', 'name');
+alert( user1[key]);
 //Объект
 const obj = {
     name: 'Maxim',
     age: 25,
-    isMarried: false
+    isMarried: false,
+    'this is mistake': true,
 };
  obj.z = 'new';
- console.log(obj);
+ console.log(obj["this is mistake"]);
 //Массив
 let arr = ['first', 'second', 'third', 7, false, [], {}];
 console.log(arr);
-
+let zxc = ['first', 'second', 'third', 7, false, [], {}];
 //Общение с пользователем
     // alert('HELLO');
 
