@@ -116,8 +116,7 @@ for (let i = 1; i < 10; i++) {
     console.log(i);
 }
 // Задача на построение треугольника
-let result = '';
-const length = 7;
+
 
 for(let i = 1; i < length; i++){
 

@@ -1,19 +1,18 @@
 "use strict";
 
-let user = {
-    name: 'john',
-    age: 28,
-    fox: true,
-}
-user.name  = 'alex';
-// delete user.name;
-// for ( let key in user) {
-//     console.log(key);
-// }
-console.log(user.fap);
-let arr = ['first', 'second', 'third', 7, false, [], {}];
-console.log(arr[3]);
+// let results = '';
+// const length = 7;
 
-document.open();
-      document.write("<h1>Долой старое, да здравствует новое!</h1>");
-      document.close();
+// for (let i = 1; i < length; i++) {
+//     for( let j = 0; j < i; j++){
+//         results += '*';
+//     }
+//     results += '\n';
+// }
+// console.log(results);
+
+
+const lines = 5;
+let result = '';
+
+for (let i = 0; )
