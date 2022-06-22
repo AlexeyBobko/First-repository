@@ -341,82 +341,40 @@ const video = ['filmix', 'youtube', 'rutube'],
 
 // ООП
 
-Object.setPrototypeOf(jonh, soldier);
-const jonh = Object.create(soldier)
+Object.setPrototypeOf(jonh, soldier); // 1ый способ
+const jonh = Object.create(soldier) // 2ой способ
 
-const personalPlanPeter = {
-    name: "Peter",
-    age: "29",
-    skills: {
-        languages: ['ru', 'eng'],
-        programmingLangs: {
-            js: '20%',
-            php: '10%',
-            java: '30%',
-            python: '40%'
-        },
-        exp: '1 month'
-    }
-};
-function showExperience(plan) {
-    const {exp} = plan.skills;
-    console.log(exp);
+/* Задача на переименование обеъктов массива */
+
+const array = ['alex brontner', 'blex crontner', 'dlex erontner', 'flex grontner', 'hlex irontner'];
+const newArr = [];
+
+for ( let i = 0; i < array.length; i++) {
+    newArr[i] = array[i][0].toUpperCase() + array[i].slice(1, 5) + array[i][5].toUpperCase() + array[i].slice(6);
 }
-showExperience(personalPlanPeter);
+console.log(newArr);
+console.log(array);
 
-function showProgrammingLangs(plan) {
-    let str = '';
-    const {programmingLangs} = plan.skills;
-    for (let key in programmingLangs) {
-      str = str + `Язык ${key} изучен на ${programmingLangs[key]}\n`; 
-    }
-    console.log(str);
+/* Breakpoints */
 
-    return str;
-}
-showProgrammingLangs(personalPlanPeter)
+/*Динамическая типизация в JS */
 
-// const personalPlanPeter = {
-//     name: "Peter",
-//     age: "29",
-//     skills: {
-//         languages: ['ru', 'eng'],
-//         programmingLangs: {
-//             js: '20%',
-//             php: '10%'
-//         },
-//         exp: '1 month'
-//     },
-//     showAgeAndLangs: function(plan) {
-//         const {age} = plan;
-//         const {languages} = plan.skills;
-//         let str = `Мне ${age} и я владею языками: `;
+console.log(!!'asdasd');
 
-//         languages.forEach(function(lang) {
-//             str += `${lang.toUpperCase()} `;
-//         });
+/* Замыкание функций и лексическое окружение */
 
-//         return str;
-//     }
-// };
 
-// personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+function createCounter() {
+    let counter = 0;
+       const myFunction = function() {
+         counter = counter + 1;
+         return counter;
+   }
+    return myFunction;
+ }
+  const increment = createCounter();
+  const c1 = increment();
+  const c2 = increment();
+  const c3 = increment();
 
-// function showExperience(plan) {
-//     const {exp} = plan.skills;
-//     return exp;
-// }
-
-// showExperience(personalPlanPeter);
-
-// function showProgrammingLangs(plan) {
-//     let str = '';
-//     const {programmingLangs} = plan.skills;
-//     for (let key in programmingLangs) {
-//         str += `Язык ${key} изучен на ${programmingLangs[key]}\n`
-//     }
-
-//     return str;
-// }
-
-// showProgrammingLangs(personalPlanPeter);
+ console.log('example increment', c1, c2, c3);

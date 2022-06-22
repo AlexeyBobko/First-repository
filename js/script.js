@@ -45,12 +45,16 @@ const obj = {
     age: 29,
     sex: 'Man',
     family: {
-        momName: 'Janna',
+        momName: 'Janna B',
         dadName: 'Sasha',
     },
 }
 
-const copy = obj;
-obj.age = 10;
-console.log(obj);
-console.log(copy);
+const {momName, dadName} = obj.family;
+console.log(momName);
+console.log(Object.keys(obj).length);
+
+const arr = [1, 2, 3, 4, 5];
+arr.length = 8;
+arr[6] = 7;
+console.log(arr);
